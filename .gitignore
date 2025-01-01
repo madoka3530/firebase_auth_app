@@ -41,3 +41,8 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+
+# Firebase configuration files
+/config/firebase/dev/firebase_config.json
+/config/firebase/stg/firebase_config.json
+/config/firebase/prod/firebase_config.json

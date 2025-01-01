@@ -19,6 +19,44 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^2.0.0
+  flutter_flavorizr: ^2.2.3
+
+flavorizr:
+  app:
+    android:
+      flavorDimensions: "environment"
+    ios:
+      flavorDimensions: "environment"
+
+  flavors:
+    dev:
+      app:
+        name: "Firebase Auth Dev"
+      android:
+        applicationId: "com.example.firebase_auth_app.dev"
+      ios:
+        bundleId: "com.example.firebaseAuthApp.dev"
+
+    stg:
+      app:
+        name: "Firebase Auth Stg"
+      android:
+        applicationId: "com.example.firebase_auth_app.stg"
+      ios:
+        bundleId: "com.example.firebaseAuthApp.stg"
+
+    prod:
+      app:
+        name: "Firebase Auth"
+      android:
+        applicationId: "com.example.firebase_auth_app"
+      ios:
+        bundleId: "com.example.firebaseAuthApp"
 
 flutter:
   uses-material-design: true
+
+  assets:
+    - config/firebase/dev/
+    - config/firebase/stg/
+    - config/firebase/prod/

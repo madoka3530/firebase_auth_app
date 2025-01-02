@@ -1,0 +1,7 @@
+#include? "Pods/Target Support Files/Pods-Runner/Pods-Runner.release.xcconfig"
+#include "Generated.xcconfig"
+#include "Flutter-Release.xcconfig"
+
+FLUTTER_FLAVOR=stg
+PRODUCT_BUNDLE_IDENTIFIER=com.example.firebase_auth_app.stg
+DISPLAY_NAME=Firebase Auth Stg

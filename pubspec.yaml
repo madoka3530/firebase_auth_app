@@ -1,0 +1,65 @@
+name: firebase_auth_app
+description: "Flutter app with Firebase authentication and provider state management"
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=2.19.6 <3.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.2
+  firebase_core: ^2.13.1
+  firebase_auth: ^4.6.3
+  provider: ^6.0.5
+  flutter_riverpod: ^2.3.6
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+  flutter_flavorizr: 2.1.6
+
+flavorizr:
+  app:
+    android:
+      flavorDimensions: "environment"
+    ios:
+      flavorDimensions: "environment"
+
+  flavors:
+    dev:
+      app:
+        name: "Firebase Auth Dev"
+      android:
+        applicationId: "com.example.firebase_auth_app.dev"
+      ios:
+        bundleId: "com.example.firebaseAuthApp.dev"
+        scheme: "dev"
+
+    stg:
+      app:
+        name: "Firebase Auth Stg"
+      android:
+        applicationId: "com.example.firebase_auth_app.stg"
+      ios:
+        bundleId: "com.example.firebaseAuthApp.stg"
+        scheme: "stg"
+
+    prod:
+      app:
+        name: "Firebase Auth"
+      android:
+        applicationId: "com.example.firebase_auth_app"
+      ios:
+        bundleId: "com.example.firebaseAuthApp"
+        scheme: "prod"
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - config/firebase/dev/
+    - config/firebase/stg/
+    - config/firebase/prod/

@@ -46,3 +46,6 @@ app.*.map.json
 /config/firebase/dev/firebase_config.json
 /config/firebase/stg/firebase_config.json
 /config/firebase/prod/firebase_config.json
+
+# Distribution files
+*.zip

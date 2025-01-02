@@ -1,8 +1,8 @@
+import 'package:flutter/material.dart';
+import 'app.dart';
 import 'flavors.dart';
 
-import 'main.dart' as runner;
-
-Future<void> main() async {
+void main() {
   F.appFlavor = Flavor.dev;
-  await runner.main();
+  runApp(App());
 }

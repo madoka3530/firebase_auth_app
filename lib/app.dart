@@ -1,23 +1,19 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import 'flavors.dart';
-import 'screens/auth_screen.dart';
+import 'pages/my_home_page.dart';
 
-class App extends ConsumerWidget {
-  const App({Key? key}) : super(key: key);
-
+class App extends StatelessWidget {
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
+  Widget build(BuildContext context) {
     return MaterialApp(
       title: F.title,
       theme: ThemeData(
         primarySwatch: Colors.blue,
-        useMaterial3: true,
       ),
       home: _flavorBanner(
-        child: const AuthScreen(),
+        child: MyHomePage(),
         show: kDebugMode,
       ),
     );
